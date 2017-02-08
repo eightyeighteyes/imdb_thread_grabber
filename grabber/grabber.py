@@ -137,7 +137,7 @@ class ForumPost(object):
 
     @property
     def raw(self):
-        return unicode(self.soup)
+        return self.soup.prettify(formatter="minimal")
 
     @property
     def raw_content(self):
